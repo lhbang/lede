@@ -64,7 +64,7 @@ jobs:
           git clone https://github.com/lhbang/luci-app-ssr-plus.git
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           git clone https://github.com/Ameykyl/luci-app-koolproxyR
-          git clone https://github.com/rosywrt/luci-theme-rosy
+          # git clone https://github.com/rosywrt/luci-theme-rosy
 
       - name: Update feeds
         run: |
