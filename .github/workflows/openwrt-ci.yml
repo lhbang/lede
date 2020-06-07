@@ -55,12 +55,16 @@ jobs:
 
           df -h
           
-      # - name: Custom plug-in theme
-        # run: |
-         # cd package
-         # mkdir openwrt-packages
-         # cd openwrt-packages
-         # git clone https://github.com/lhbang/openwrt-trojan.git
+      - name: Custom plug-in theme
+        run: |
+          cd package
+          mkdir openwrt-packages
+          cd openwrt-packages
+          git clone https://github.com/lhbang/openwrt-trojan.git
+          git clone https://github.com/lhbang/luci-app-ssr-plus.git
+          git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
+          git clone https://github.com/Ameykyl/luci-app-koolproxyR
+          git clone https://github.com/rosywrt/luci-theme-rosy
 
       - name: Update feeds
         run: |
@@ -171,6 +175,17 @@ jobs:
           CONFIG_PACKAGE_luci-app-wireguard=y
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
           CONFIG_PACKAGE_luci-app-trojan-server=y
+          CONFIG_PACKAGE_luci-app-ssr-plus=y
+          CONFIG_PACKAGE_luci-app-S-S R-plus=y
+          CONFIG_PACKAGE_luci-app-S-S R-plus_INCLUDE_s-s New Versiong=y
+          CONFIG_PACKAGE_luci-app-S-S R-plus_INCLUDE_V2ray=y
+          CONFIG_PACKAGE_luci-app-S-S R-plus_INCLUDE_Kcptun=y
+          CONFIG_PACKAGE_luci-app-S-S R-plus_INCLUDE_s-sR Server=y
+          CONFIG_PACKAGE_luci-app-S-S R-plus_INCLUDE_s-sR Socks and Tunnel=y
+          CONFIG_PACKAGE_luci-app-S-S R-pro=y
+          CONFIG_PACKAGE_luci-app-S-S Rserver-python=y
+          CONFIG_PACKAGE_luci-app-wireless-regdb=y
+          CONFIG_PACKAGE_luci-app-wifischedule=y
           EOF
           
           # Firmware网卡驱动:
@@ -295,10 +310,10 @@ jobs:
           EOF
 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
-          # cat >> .config <<EOF
-          # # CONFIG_TARGET_IMAGES_PAD is not set
-          # # CONFIG_VMDK_IMAGES is not set
-          # EOF
+          cat >> .config <<EOF
+          # CONFIG_TARGET_IMAGES_PAD is not set
+          # CONFIG_VMDK_IMAGES is not set
+          EOF
 
           # 
           # ========================固件定制部分结束========================
