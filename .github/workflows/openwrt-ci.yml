@@ -64,6 +64,7 @@ jobs:
           git clone https://github.com/lhbang/luci-app-ssr-plus.git
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           git clone https://github.com/rosywrt/luci-theme-rosy
+          git clone https://github.com/multipath-tcp/mptcp.git
 
       - name: Update feeds
         run: |
@@ -187,110 +188,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-wifischedule=y
           EOF
           
-          # Firmware网卡驱动:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_aircard-pcmcia-firmware=y
-          CONFIG_PACKAGE_amd64-microcode=y
-          CONFIG_PACKAGE_amdgpu-firmware=y
-          CONFIG_PACKAGE_ar3k-firmware=y
-          CONFIG_PACKAGE_ath10k-firmware-qca4019=y
-          CONFIG_PACKAGE_ath10k-firmware-qca4019-ct=y
-          CONFIG_PACKAGE_ath10k-firmware-qca4019-ct-htt=y
-          CONFIG_PACKAGE_ath10k-firmware-qca6174=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9887=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9887-ct=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9887-ct-htt=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9888=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9888-ct=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9888-ct-htt=y
-          CONFIG_PACKAGE_ath10k-firmware-qca988x=y
-          CONFIG_PACKAGE_ath10k-firmware-qca988x-ct=y
-          CONFIG_PACKAGE_ath10k-firmware-qca988x-ct-htt=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9984=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9984-ct=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9984-ct-htt=y
-          CONFIG_PACKAGE_ath10k-firmware-qca99x0=y
-          CONFIG_PACKAGE_ath10k-firmware-qca99x0-ct=y
-          CONFIG_PACKAGE_ath10k-firmware-qca99x0-ct-htt=y
-          CONFIG_PACKAGE_ath6k-firmware=y
-          CONFIG_PACKAGE_ath9k-htc-firmware=y
-          CONFIG_PACKAGE_b43legacy-firmware=y
-          CONFIG_B43LEGACY_FW_SQUASH=y
-          CONFIG_B43LEGACY_FW_SQUASH_COREREVS="1,2,3,4"=y
-          CONFIG_PACKAGE_bnx2-firmware=y
-          CONFIG_PACKAGE_brcmfmac-firmware-4329-sdio=y
-          CONFIG_PACKAGE_brcmfmac-firmware-43362-sdio=y
-          CONFIG_PACKAGE_brcmfmac-firmware-43430-sdio=y
-          CONFIG_PACKAGE_brcmfmac-firmware-43430a0-sdio=y
-          CONFIG_PACKAGE_brcmfmac-firmware-43455-sdio=y
-          CONFIG_PACKAGE_brcmfmac-firmware-43602a1-pcie=y
-          CONFIG_PACKAGE_brcmfmac-firmware-4366b1-pcie=y
-          CONFIG_PACKAGE_brcmfmac-firmware-4366c0-pcie=y
-          CONFIG_PACKAGE_brcmfmac-firmware-usb=y
-          CONFIG_PACKAGE_brcmsmac-firmware=y
-          CONFIG_PACKAGE_carl9170-firmware=y
-          CONFIG_PACKAGE_e100-firmware=y
-          CONFIG_PACKAGE_edgeport-firmware=y
-          CONFIG_PACKAGE_ibt-firmware=y
-          CONFIG_PACKAGE_intel-microcode=y
-          CONFIG_PACKAGE_iwl3945-firmware=y
-          CONFIG_PACKAGE_iwl4965-firmware=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl100=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl1000=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl105=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl135=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl2000=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl2030=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl3160=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl3168=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl5000=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl5150=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl6000g2=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl6000g2a=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl6000g2b=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl6050=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl7260=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl7265=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl7265d=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl8260c=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl8265=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl9000=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl9260=y
-          CONFIG_PACKAGE_libertas-sdio-firmware=y
-          CONFIG_PACKAGE_libertas-spi-firmware=y
-          CONFIG_PACKAGE_libertas-usb-firmware=y
-          CONFIG_PACKAGE_mt7601u-firmware=y
-          CONFIG_PACKAGE_mwifiex-pcie-firmware=y
-          CONFIG_PACKAGE_mwifiex-sdio-firmware=y
-          CONFIG_PACKAGE_mwl8k-firmware=y
-          CONFIG_PACKAGE_p54-pci-firmware=y
-          CONFIG_PACKAGE_p54-spi-firmware=y
-          CONFIG_PACKAGE_p54-usb-firmware=y
-          CONFIG_PACKAGE_prism54-firmware=y
-          CONFIG_PACKAGE_r8169-firmware=y
-          CONFIG_PACKAGE_radeon-firmware=y
-          CONFIG_PACKAGE_rs9113-firmware=y
-          CONFIG_PACKAGE_rt2800-pci-firmware=y
-          CONFIG_PACKAGE_rt2800-usb-firmware=y
-          CONFIG_PACKAGE_rt61-pci-firmware=y
-          CONFIG_PACKAGE_rt73-usb-firmware=y
-          CONFIG_PACKAGE_rtl8188eu-firmware=y
-          CONFIG_PACKAGE_rtl8192ce-firmware=y
-          CONFIG_PACKAGE_rtl8192cu-firmware=y
-          CONFIG_PACKAGE_rtl8192de-firmware=y
-          CONFIG_PACKAGE_rtl8192eu-firmware=y
-          CONFIG_PACKAGE_rtl8192se-firmware=y
-          CONFIG_PACKAGE_rtl8192su-firmware=y
-          CONFIG_PACKAGE_rtl8723au-firmware=y
-          CONFIG_PACKAGE_rtl8723bu-firmware=y
-          CONFIG_PACKAGE_rtl8821ae-firmware=y
-          CONFIG_PACKAGE_ti-3410-firmware=y
-          CONFIG_PACKAGE_ti-5052-firmware=y
-          CONFIG_PACKAGE_wireless-regdb=y
-          CONFIG_PACKAGE_wl12xx-firmware=y
-          CONFIG_PACKAGE_wl18xx-firmware=y
-          EOF
-
+          
           # LuCI主题:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon=y
@@ -308,6 +206,7 @@ jobs:
           CONFIG_PACKAGE_tree=y
           CONFIG_PACKAGE_vim-fuller=y
           CONFIG_PACKAGE_wget=y
+          CONFIG_PACKAGE_mptcp=y
           EOF
 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
