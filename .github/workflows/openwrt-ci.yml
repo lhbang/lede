@@ -189,106 +189,106 @@ jobs:
           
           # Firmware网卡驱动:
           cat >> .config <<EOF
-          CONFIG_PACKAGE_aircard-pcmcia-firmware is not set
-          CONFIG_PACKAGE_amd64-microcode is not set
-          CONFIG_PACKAGE_amdgpu-firmware is not set
-          CONFIG_PACKAGE_ar3k-firmware is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca4019 is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca4019-ct is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca4019-ct-htt is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca6174 is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca9887 is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca9887-ct is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca9887-ct-htt is not set
+          CONFIG_PACKAGE_aircard-pcmcia-firmware=y
+          CONFIG_PACKAGE_amd64-microcode=y
+          CONFIG_PACKAGE_amdgpu-firmware=y
+          CONFIG_PACKAGE_ar3k-firmware=y
+          CONFIG_PACKAGE_ath10k-firmware-qca4019=y
+          CONFIG_PACKAGE_ath10k-firmware-qca4019-ct=y
+          CONFIG_PACKAGE_ath10k-firmware-qca4019-ct-htt=y
+          CONFIG_PACKAGE_ath10k-firmware-qca6174=y
+          CONFIG_PACKAGE_ath10k-firmware-qca9887=y
+          CONFIG_PACKAGE_ath10k-firmware-qca9887-ct=y
+          CONFIG_PACKAGE_ath10k-firmware-qca9887-ct-htt=y
           CONFIG_PACKAGE_ath10k-firmware-qca9888=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9888-ct is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca9888-ct-htt is not set
+          CONFIG_PACKAGE_ath10k-firmware-qca9888-ct=y
+          CONFIG_PACKAGE_ath10k-firmware-qca9888-ct-htt=y
           CONFIG_PACKAGE_ath10k-firmware-qca988x=y
-          CONFIG_PACKAGE_ath10k-firmware-qca988x-ct is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca988x-ct-htt is not set
+          CONFIG_PACKAGE_ath10k-firmware-qca988x-ct=y
+          CONFIG_PACKAGE_ath10k-firmware-qca988x-ct-htt=y
           CONFIG_PACKAGE_ath10k-firmware-qca9984=y
-          CONFIG_PACKAGE_ath10k-firmware-qca9984-ct is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca9984-ct-htt is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca99x0 is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca99x0-ct is not set
-          CONFIG_PACKAGE_ath10k-firmware-qca99x0-ct-htt is not set
-          CONFIG_PACKAGE_ath6k-firmware is not set
+          CONFIG_PACKAGE_ath10k-firmware-qca9984-ct=y
+          CONFIG_PACKAGE_ath10k-firmware-qca9984-ct-htt=y
+          CONFIG_PACKAGE_ath10k-firmware-qca99x0=y
+          CONFIG_PACKAGE_ath10k-firmware-qca99x0-ct=y
+          CONFIG_PACKAGE_ath10k-firmware-qca99x0-ct-htt=y
+          CONFIG_PACKAGE_ath6k-firmware=y
           CONFIG_PACKAGE_ath9k-htc-firmware=y
           CONFIG_PACKAGE_b43legacy-firmware=y
           CONFIG_B43LEGACY_FW_SQUASH=y
-          CONFIG_B43LEGACY_FW_SQUASH_COREREVS="1,2,3,4"
+          CONFIG_B43LEGACY_FW_SQUASH_COREREVS="1,2,3,4"=y
           CONFIG_PACKAGE_bnx2-firmware=y
-          CONFIG_PACKAGE_brcmfmac-firmware-4329-sdio is not set
-          CONFIG_PACKAGE_brcmfmac-firmware-43362-sdio is not set
-          CONFIG_PACKAGE_brcmfmac-firmware-43430-sdio is not set
-          CONFIG_PACKAGE_brcmfmac-firmware-43430a0-sdio is not set
-          CONFIG_PACKAGE_brcmfmac-firmware-43455-sdio is not set
+          CONFIG_PACKAGE_brcmfmac-firmware-4329-sdio=y
+          CONFIG_PACKAGE_brcmfmac-firmware-43362-sdio=y
+          CONFIG_PACKAGE_brcmfmac-firmware-43430-sdio=y
+          CONFIG_PACKAGE_brcmfmac-firmware-43430a0-sdio=y
+          CONFIG_PACKAGE_brcmfmac-firmware-43455-sdio=y
           CONFIG_PACKAGE_brcmfmac-firmware-43602a1-pcie=y
-          CONFIG_PACKAGE_brcmfmac-firmware-4366b1-pcie is not set
-          CONFIG_PACKAGE_brcmfmac-firmware-4366c0-pcie is not set
+          CONFIG_PACKAGE_brcmfmac-firmware-4366b1-pcie=y
+          CONFIG_PACKAGE_brcmfmac-firmware-4366c0-pcie=y
           CONFIG_PACKAGE_brcmfmac-firmware-usb=y
           CONFIG_PACKAGE_brcmsmac-firmware=y
-          CONFIG_PACKAGE_carl9170-firmware is not set
-          CONFIG_PACKAGE_e100-firmware is not set
-          CONFIG_PACKAGE_edgeport-firmware is not set
-          CONFIG_PACKAGE_ibt-firmware is not set
-          CONFIG_PACKAGE_intel-microcode is not set
-          CONFIG_PACKAGE_iwl3945-firmware is not set
-          CONFIG_PACKAGE_iwl4965-firmware is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl100 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl1000 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl105 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl135 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl2000 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl2030 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl3160 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl3168 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl5000 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl5150 is not set
+          CONFIG_PACKAGE_carl9170-firmware=y
+          CONFIG_PACKAGE_e100-firmware=y
+          CONFIG_PACKAGE_edgeport-firmware=y
+          CONFIG_PACKAGE_ibt-firmware=y
+          CONFIG_PACKAGE_intel-microcode=y
+          CONFIG_PACKAGE_iwl3945-firmware=y
+          CONFIG_PACKAGE_iwl4965-firmware=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl100=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl1000=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl105=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl135=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl2000=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl2030=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl3160=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl3168=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl5000=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl5150=y
           CONFIG_PACKAGE_iwlwifi-firmware-iwl6000g2=y
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl6000g2a is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl6000g2b is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl6050 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl7260 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl7265 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl7265d is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl8260c is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl8265 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl9000 is not set
-          CONFIG_PACKAGE_iwlwifi-firmware-iwl9260 is not set
-          CONFIG_PACKAGE_libertas-sdio-firmware is not set
-          CONFIG_PACKAGE_libertas-spi-firmware is not set
-          CONFIG_PACKAGE_libertas-usb-firmware is not set
-          CONFIG_PACKAGE_mt7601u-firmware is not set
-          CONFIG_PACKAGE_mwifiex-pcie-firmware is not set
-          CONFIG_PACKAGE_mwifiex-sdio-firmware is not set
-          CONFIG_PACKAGE_mwl8k-firmware is not set
-          CONFIG_PACKAGE_p54-pci-firmware is not set
-          CONFIG_PACKAGE_p54-spi-firmware is not set
-          CONFIG_PACKAGE_p54-usb-firmware is not set
-          CONFIG_PACKAGE_prism54-firmware is not set
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl6000g2a=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl6000g2b=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl6050=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl7260=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl7265=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl7265d=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl8260c=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl8265=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl9000=y
+          CONFIG_PACKAGE_iwlwifi-firmware-iwl9260=y
+          CONFIG_PACKAGE_libertas-sdio-firmware=y
+          CONFIG_PACKAGE_libertas-spi-firmware=y
+          CONFIG_PACKAGE_libertas-usb-firmware=y
+          CONFIG_PACKAGE_mt7601u-firmware=y
+          CONFIG_PACKAGE_mwifiex-pcie-firmware=y
+          CONFIG_PACKAGE_mwifiex-sdio-firmware=y
+          CONFIG_PACKAGE_mwl8k-firmware=y
+          CONFIG_PACKAGE_p54-pci-firmware=y
+          CONFIG_PACKAGE_p54-spi-firmware=y
+          CONFIG_PACKAGE_p54-usb-firmware=y
+          CONFIG_PACKAGE_prism54-firmware=y
           CONFIG_PACKAGE_r8169-firmware=y
-          CONFIG_PACKAGE_radeon-firmware is not set
-          CONFIG_PACKAGE_rs9113-firmware is not set
-          CONFIG_PACKAGE_rt2800-pci-firmware is not set
+          CONFIG_PACKAGE_radeon-firmware=y
+          CONFIG_PACKAGE_rs9113-firmware=y
+          CONFIG_PACKAGE_rt2800-pci-firmware=y
           CONFIG_PACKAGE_rt2800-usb-firmware=y
-          CONFIG_PACKAGE_rt61-pci-firmware is not set
-          CONFIG_PACKAGE_rt73-usb-firmware is not set
-          CONFIG_PACKAGE_rtl8188eu-firmware is not set
-          CONFIG_PACKAGE_rtl8192ce-firmware is not set
-          CONFIG_PACKAGE_rtl8192cu-firmware is not set
-          CONFIG_PACKAGE_rtl8192de-firmware is not set
-          CONFIG_PACKAGE_rtl8192eu-firmware is not set
-          CONFIG_PACKAGE_rtl8192se-firmware is not set
-          CONFIG_PACKAGE_rtl8192su-firmware is not set
-          CONFIG_PACKAGE_rtl8723au-firmware is not set
-          CONFIG_PACKAGE_rtl8723bu-firmware is not set
-          CONFIG_PACKAGE_rtl8821ae-firmware is not set
-          CONFIG_PACKAGE_ti-3410-firmware is not set
-          CONFIG_PACKAGE_ti-5052-firmware is not set
+          CONFIG_PACKAGE_rt61-pci-firmware=y
+          CONFIG_PACKAGE_rt73-usb-firmware=y
+          CONFIG_PACKAGE_rtl8188eu-firmware=y
+          CONFIG_PACKAGE_rtl8192ce-firmware=y
+          CONFIG_PACKAGE_rtl8192cu-firmware=y
+          CONFIG_PACKAGE_rtl8192de-firmware=y
+          CONFIG_PACKAGE_rtl8192eu-firmware=y
+          CONFIG_PACKAGE_rtl8192se-firmware=y
+          CONFIG_PACKAGE_rtl8192su-firmware=y
+          CONFIG_PACKAGE_rtl8723au-firmware=y
+          CONFIG_PACKAGE_rtl8723bu-firmware=y
+          CONFIG_PACKAGE_rtl8821ae-firmware=y
+          CONFIG_PACKAGE_ti-3410-firmware=y
+          CONFIG_PACKAGE_ti-5052-firmware=y
           CONFIG_PACKAGE_wireless-regdb=y
-          CONFIG_PACKAGE_wl12xx-firmware is not set
-          CONFIG_PACKAGE_wl18xx-firmware is not set
+          CONFIG_PACKAGE_wl12xx-firmware=y
+          CONFIG_PACKAGE_wl18xx-firmware=y
           EOF
 
           # LuCI主题:
@@ -296,6 +296,7 @@ jobs:
           CONFIG_PACKAGE_luci-theme-argon=y
           CONFIG_PACKAGE_luci-theme-netgear=y
           CONFIG_PACKAGE_luci-theme-rosy=y
+          CONFIG_PACKAGE_luci-theme-atmaterial=y
           EOF
 
           # 常用软件包:
